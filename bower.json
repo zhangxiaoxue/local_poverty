@@ -1,0 +1,34 @@
+{
+  "name": "Fulton Poverty Observatory",
+  "authors": [
+    "Xiaoxue Zhang"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "nprogress": "~0.2.0",
+    "imagesloaded": "~3.2.0",
+    "artTemplate": "~3.0.1",
+    "reset-css": "~2.0.2011012602",
+    "highcharts": "~4.1.9"
+  },
+  "keywords": [
+    "data",
+    "mining",
+    "map",
+    "google",
+    "map"
+  ]
+}
