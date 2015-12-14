@@ -1,4 +1,7 @@
 # Fulton Poverty Observatory 
+
+Online: <a href="http://poverty.xxzhang.info/" target="_blank">http://poverty.xxzhang.info/</a>
+
 This project is to help people learn poverty changes in our poor neighborhood in Fulton County.
 Compared to normal analysis for just one type of poverty tract, my project is based on four specific types of poverty tracts according to their poverty changing trend and degree during the last decade.
 By analyzing the demographic and economic changes in Fulton County. Interactors are able to explore the reasons leading to poverty and figure out the most effective measures to alleviate poverty in this area.
