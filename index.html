@@ -143,10 +143,43 @@
 <script src="bower_components/highcharts/highcharts.js"></script>
 <script src="assets/js/highcharts_theme.js"></script>
 <!-- endbuild -->
-<script src="http://www.google.com/jsapi?key=AIzaSyDZyrmRF6CeudD-wclNCp8Ff-yfudDh86Q"></script>
+<!--<script src="http://www.google.com/jsapi?key=AIzaSyDZyrmRF6CeudD-wclNCp8Ff-yfudDh86Q"></script>-->
 <!-- build:js assets/js/site.js -->
 <script src="assets/js/map.js"></script>
-<script src="assets/js/main.js"></script>
+<!--<script src="assets/js/main.js"></script>-->
 <!-- endbuild -->
+
+<script>
+    function init(){
+        NProgress.configure({ showSpinner: false });
+        NProgress.configure({ minimum: 0.1 });
+        $(document)
+                .ajaxStart(function() {
+                    NProgress.start();
+                })
+                .ajaxComplete(function(event,request, settings) {
+                    NProgress.done();
+                });
+
+        if($('#cd-google-map').length){
+
+            //init map
+            var censusMap = new CensusMap();
+            censusMap.initMap(hideLoadingLayer);
+
+            function hideLoadingLayer(){
+                //when the map is prepared, remove loading effect and show the typing effect
+                $(".preloader-icon").delay(800).fadeOut("normal", function(){
+
+                    $(".preloader").fadeOut();
+
+                });
+            }
+        }
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZyrmRF6CeudD-wclNCp8Ff-yfudDh86Q&callback=init">
+</script>
 </body>
 </html>
